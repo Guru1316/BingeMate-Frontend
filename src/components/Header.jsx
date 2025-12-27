@@ -38,13 +38,15 @@ const Header = ({ setActiveUser }) => {
                 <NavLink to="/publicreviews">Reviews</NavLink>
 
                 {isAdmin && (
+                    <>
                     <NavLink to="/admin/dashboard">Admin</NavLink>
+                    <NavLink to="/addSeries">Add Series</NavLink>
+                    </>
                 )}
 
                 {!isAdmin && auth && token && (
                     <>
                         <NavLink to="/diary">Diary</NavLink>
-                        <NavLink to="/addSeries">Add Series</NavLink>
                         <NavLink to="/watchlist">Watchlist</NavLink>
                     </>
                 )}

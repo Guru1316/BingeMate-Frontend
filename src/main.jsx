@@ -46,7 +46,7 @@ const routerVariables = createHashRouter([{
     },
     {
       path:"/addSeries",
-      element: <ProtectedRoutes> <SeriesForm></SeriesForm> </ProtectedRoutes> ,
+      element: <AdminRoute> <SeriesForm></SeriesForm> </AdminRoute> ,
     },
     {
       path:"/login",

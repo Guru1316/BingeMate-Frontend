@@ -27,7 +27,6 @@ const Footer = () => {
                             <>
                             <a href="#/diary">Diary</a>
                             <a href="#/watchlist">Watchlist</a>
-                            <a href="#/addSeries">Add Series</a>
                             </>
                         )}
                     </div>

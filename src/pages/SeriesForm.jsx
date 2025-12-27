@@ -2,7 +2,7 @@ import { useNavigate, useOutletContext } from 'react-router-dom';
 import '../styles/seriesForm.css';
 import { useForm } from 'react-hook-form';
 import API from '../utils/api';
-import { useEffect } from 'react';
+// import { useEffect } from 'react';
 
 const SeriesForm = () => {
     const { data, setData } = useOutletContext();
@@ -26,18 +26,20 @@ const SeriesForm = () => {
         }
     });
 
-    useEffect(() => {
-        const token = localStorage.getItem("token");
-        if (!token) {
-            alert("Please login first!");
-            navigate("/");
-        }
-    }, [navigate]);
+    // useEffect(() => {
+    //     const token = localStorage.getItem("token");
+    //     if (!token) {
+    //         alert("Please login first!");
+    //         navigate("/");
+    //     }
+    // }, [navigate]);
 
     const onSubmitHandler = async (formData) => {
         try {
             const formattedData = {
                 ...formData,
+                // eslint-disable-next-line react-hooks/purity
+                tmdbId: Date.now(),
                 origin_country: formData.origin_country
                     .split(",")
                     .map(e => e.trim()),
