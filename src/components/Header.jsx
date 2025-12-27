@@ -40,7 +40,6 @@ const Header = ({ setActiveUser }) => {
                 {isAdmin && (
                     <>
                     <NavLink to="/admin/dashboard">Admin</NavLink>
-                    <NavLink to="/addSeries">Add Series</NavLink>
                     </>
                 )}
 
